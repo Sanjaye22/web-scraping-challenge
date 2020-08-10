@@ -15,15 +15,13 @@ client = pymongo.MongoClient(conn)
 #Set database
 db = client.mars_db
 
-#Drops collection if available to remove duplicates
-db.mars.drop()
-
 # create route that renders index.html template
 @app.route("/")
 def home():
 
     # Find data
-    mars_info = mongo.db.mars_info.find()
+    mars_info = db.mars.find_one()
+    print(mars_info)
 
     # Return template and data
     return render_template("index.html", mars_info=mars_info)
@@ -33,10 +31,10 @@ def home():
 def scrape():
 
     # Run the scrape function
-    mars_data = scrape_mars.mars_info
-    mars_data = scrape_mars.scrape_mars_news()
+    mars_data = scrape_mars.scrape()
+    
     # Update the Mongo database using update and upsert=True
-    mongo.db.collection.update({}, mars_data, upsert=True)
+    db.mars.update({}, mars_data, upsert=True)
 
     # Redirect back to home page
     return redirect("/")
