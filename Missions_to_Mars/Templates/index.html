@@ -12,57 +12,57 @@
 
 <body>
   
-  <body class="text-black" style="background-color: grey;">
+  <body class="text-black" style="background-color: lightsalmon;">
     <div class="container">
 
-        <!-- Jumbotron -->
-        <div class="jumbotron text-center" style="background-color: black;">
-            <h1 class="display-1 text-white"><strong> Mission to Mars </strong> </h1>
-            <a class="btn btn-lg text-black" style="background-color: aqua;" href="/scrape" role="button">Scrape New
-                Data</a>
-        </div>
+    <!-- Jumbotron -->
+    <div class="jumbotron text-center" style="background-color: black;">
+        <h1 class="display-1 text-white" style="color: white"><strong> Mission to Mars</strong></h1>
+        <a class="btn btn-lg text-black" style="background-color: lightsalmon;" href="/scrape" role="button">Scrape New
+            Data</a>
+    </div>
 
-        <!-- News Section -->
-        <div class="container">
-          <div class="row">
-            <h3 class="heading">Latest Mars News</h3>
-            <h6>{{ mars_info.news_title }}</h6>
-            <p>{{ mars_info.news_p }}</p>
-        </div>
-
+    <!-- News Section -->
+    <div class="container">
+      <div class="row">
+        <h2 class="heading">Latest Mars News</h2>
+        <h3>{{ mars_info.news_title }}</h3>
+        <p>{{ mars_info.news_p }}</p>
+      </div>
+    </div>  
         <div class="container">
             <div class="row">
                 <!-- Left Image-->
                 <div class="col-md-7">
-                    <h3>Featured Mars Image</h3>
+                    <h2>Featured Mars Image</h2>
                     <img src="{{ mars_info.featured_image_url }}" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
                 </div>
 
                 <!-- Table -->
-                  <div class="col-5>"
-            <h3 class="heading">Mars Facts</h3>
+                  <div class="col-5">
+                    <h2 class="mars-heading">Mars Facts</h2>
                     <p> {{ mars_info.fact_table|safe }}</p>
                     
                   </div> <!-- col4 -->
             </div><!-- Row -->
         </div><!-- Container -->
 
-        <!-- Cards -->
-        <h3 class="text-center">Mars Hemispheres</h3>
+      <!-- Cards -->
+        <h2 class="text-center">Mars Hemispheres</h2>
 		<br>
 		<div class="row">
 			<div class="col-lg-6">
 				<img src="{{ mars_info.hemisphere_images[0]['img_url'] }}" style="width:100%" class="img-responsive"
 					style="padding-right: 20px; padding left: 20px;"
 					alt=" {{ mars_info.hemisphere_images[0]['title'] }} " />
-				<h5>{{ mars_info.hemisphere_images[0]['title'] }}</h5>
+				<h4>{{ mars_info.hemisphere_images[0]['title'] }}</h4>
 ​
 			</div>
 			<div class="col-lg-6">
 				<img src="{{ mars_info.hemisphere_images[1]['img_url'] }}" style="width:100%" class="img-responsive"
 					style="padding-right: 20px; padding left: 20px;"
 					alt=" {{ mars_info.hemisphere_images[1]['title'] }} " />
-				<h5>{{ mars_info.hemisphere_images[1]['title'] }}</h5>
+				<h4>{{ mars_info.hemisphere_images[1]['title'] }}</h4>
 			</div>
 		</div>
 ​
@@ -71,14 +71,14 @@
 				<img src="{{ mars_info.hemisphere_images[2]['img_url'] }}" style="width:100%" class="img-responsive"
 					style="padding-right: 20px; padding left: 20px;"
 					alt=" {{ mars_info.hemisphere_images[2]['title'] }} " />
-				<h5>{{ mars_info.hemisphere_images[2]['title'] }}</h5>
+				<h4>{{ mars_info.hemisphere_images[2]['title'] }}</h4>
 ​
 			</div>
 			<div class="col-lg-6">
 				<img src="{{ mars_info.hemisphere_images[3]['img_url'] }}" style="width:100%" class="img-responsive"
 					style="padding-right: 20px; padding left: 20px;"
 					alt="{{ mars_info.hemisphere_images[3]['title'] }} " />
-				<h5>{{ mars_info.hemisphere_images[3]['title'] }}</h5>
+				<h4>{{ mars_info.hemisphere_images[3]['title'] }}</h4>
 			</div>
 		</div>
 ​	</div>

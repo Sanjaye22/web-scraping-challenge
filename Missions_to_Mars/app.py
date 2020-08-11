@@ -37,7 +37,7 @@ def scrape():
     db.mars.update({}, mars_data, upsert=True)
 
     # Redirect back to home page
-    return redirect("/")
+    return redirect("/", code=302)
 
 
 if __name__ == "__main__":
