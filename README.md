@@ -20,9 +20,9 @@ Objective: Build a web application that scrapes various websites for data relate
 
 * Use splinter to navigate the site and find the image url for the current Featured Mars Image and assign the url string to a variable called `featured_image_url`.
 
-* Make sure to find the image url to the full size `.jpg` image.
+* Find the image url to the full size `.jpg` image.
 
-* Make sure to save a complete url string for this image.
+* Save a complete url string for this image.
 
 ### Mars Facts
 
