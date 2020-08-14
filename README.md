@@ -2,7 +2,7 @@
 # Mission to Mars
 
 
-Objective: build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. 
+Objective: Build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. 
 
 * This challenge requires the initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter. 
 
