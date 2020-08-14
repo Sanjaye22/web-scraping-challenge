@@ -7,18 +7,18 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mission to Mars</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
 </head>
 
 <body>
   
-  <body class="text-black" style="background-color: rgb(179, 126, 107);">
+  <body class="text-black" style="background-color: rgb(255, 230, 230);">
     <div class="container">
 
     <!-- Jumbotron -->
     <div class="jumbotron text-center" style="background-color: black;">
         <h1 class="display-1 text-white" style="color: white"><strong> Mission to Mars</strong></h1>
-        <a class="btn btn-lg text-black" style="background-color: rgb(185, 62, 13);" href="/scrape" role="button">Scrape New
+        <a class="btn btn-lg text-black" style="background-color: whitesmoke;" href="/scrape" role="button">Scrape New
             Data</a>
     </div>
 
